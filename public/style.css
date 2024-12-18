@@ -37,8 +37,11 @@ li a:hover {
     overflow: hidden;
     width: 300px;
     transition: 0.3s;
+    padding: 10px;
+    text-align: center;
 }
 
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,2);
 }
+

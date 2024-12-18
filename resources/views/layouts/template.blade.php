@@ -17,12 +17,12 @@
         </ul>
     </nav>
 
-    <div class="card">
-        <img src="https://via.placeholder.com/300" alt="Image 1">
-        <p>test</p>
-    </div>
+    @yield('content')
 
-@yield('content')
+    <div class="card">
+        <img src="https://via.placeholder.com/300" alt="image">
+        <p>Songs</p>
+    </div>
 
 <footer>
     &copy; Sean van Gooswilligen - 2024
