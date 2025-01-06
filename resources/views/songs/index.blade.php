@@ -6,7 +6,6 @@
 @endsection
 
 @section('content')
-    <link rel="stylesheet" href="/style.css">
     <h1>Hier komen de songs te staan</h1>
     <ul>
         @foreach($songs as $song)

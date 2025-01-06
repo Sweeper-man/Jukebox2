@@ -5,7 +5,6 @@
 @endsection
 
 @section('content')
-    <link rel="stylesheet" href="/style.css">
     <h1>Hier komen de genres te staan</h1>
     <ul>
         @foreach($genres as $genre)
