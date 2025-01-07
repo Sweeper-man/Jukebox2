@@ -11,4 +11,11 @@
             <li>{{$genre->name}}</li>
         @endforeach
     </ul>
+
+    <div class="section">
+        <div class="card">
+            <img src="https://via.placeholder.com/300" alt="image">
+            <p>Genres</p>
+        </div>
+    </div>
 @endsection

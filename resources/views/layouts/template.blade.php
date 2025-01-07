@@ -19,13 +19,6 @@
 
     @yield('content')
 
-    <div class="section">
-        <div class="card">
-            <img src="https://via.placeholder.com/300" alt="image">
-            <p>Songs</p>
-        </div>
-    </div>
-
 <footer>
     &copy; Sean van Gooswilligen - 2024
 </footer>
