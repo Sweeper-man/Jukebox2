@@ -44,8 +44,8 @@ li a:hover {
 }
 
 .section {
-    Display: flex;  
-    align-items: center;  
+    Display: flex;
+    align-items: center;
     justify-content: center;
 }
 
