@@ -5,11 +5,10 @@ body {
     background-attachment: fixed;
 }
 
-ul {
+/* ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
+    display: inline;
 }
   
 li {
@@ -27,6 +26,25 @@ li a {
 
 li a:hover {
     background-color: gray;
+} */
+
+.menu {
+    overflow: hidden;
+    background-color: black;
+}
+  
+.menu a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    transition: 1s;
+}
+  
+.menu a:hover {
+    background-color: white;
+    color: black;
 }
 
 .card {
@@ -49,6 +67,42 @@ li a:hover {
     justify-content: center;
 }
 
-nav {
+/* nav {
     background-color: lightgray;
+} */
+
+.dropdown {
+    background-color: lightgray;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
 }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: lightgrey}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* .title {
+    font-size: medium;
+    font-weight: bold;
+} */
