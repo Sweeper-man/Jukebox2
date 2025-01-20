@@ -5,34 +5,11 @@ body {
     background-attachment: fixed;
 }
 
-/* ul {
-    list-style-type: none;
-    overflow: hidden;
-    display: inline;
-}
-  
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 15px;
-    text-decoration: none;
-    transition: 1s;
-}
-
-li a:hover {
-    background-color: gray;
-} */
-
 .menu {
     overflow: hidden;
     background-color: black;
 }
-  
+
 .menu a {
     float: left;
     color: white;
@@ -41,7 +18,7 @@ li a:hover {
     text-decoration: none;
     transition: 1s;
 }
-  
+
 .menu a:hover {
     background-color: white;
     color: black;
@@ -67,12 +44,8 @@ li a:hover {
     justify-content: center;
 }
 
-/* nav {
-    background-color: lightgray;
-} */
-
 .dropdown {
-    background-color: lightgray;
+    color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
@@ -101,8 +74,3 @@ li a:hover {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-/* .title {
-    font-size: medium;
-    font-weight: bold;
-} */
