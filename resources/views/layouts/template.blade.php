@@ -10,21 +10,6 @@
     @stack('styles')
 </head>
 <body>
-    <!-- <nav>
-        <ul>
-            <div class="navbar-brand" href="#">
-                <div class="title">Jukebox</div>
-            </div>
-            <li><a href="/">Home</a></li>
-            <div class="dropdown">Songs
-                <div class="dropdown-content">
-                    <a href="{{route('song.create')}}">Create</a>
-                    <a href="{{route('song.index')}}">All</a>
-                </div>
-            </div>
-        </ul>
-    </nav> -->
-
     <div class="menu">
         <a href="/">Home</a>
         <div class="dropdown">Songs
