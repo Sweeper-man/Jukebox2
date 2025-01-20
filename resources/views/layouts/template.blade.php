@@ -29,7 +29,7 @@
         <a href="/">Home</a>
         <div class="dropdown">Songs
             <div class="dropdown-content">
-                <a href="{{route('song.index')}}">Create</a>
+                <a href="{{route('song.create')}}">Create</a>
                 <a href="{{route('song.index')}}">All</a>
             </div>
         </div>
