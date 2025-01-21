@@ -18,13 +18,15 @@
                 <a href="{{route('song.index')}}">All</a>
             </div>
         </div>
+        <div class="dropdown">Genres
+            <div class="dropdown-content">
+                <a href="{{route('genre.create')}}">Create</a>
+                <a href="{{route('genre.index')}}">All</a>
+            </div>
+        </div>
     </div>
 
     @yield('content')
-
-<footer>
-    &copy; Sean van Gooswilligen - 2024
-</footer>
 
 @stack('scripts')
 </body>
