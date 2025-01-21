@@ -8,11 +8,10 @@
 @section('content')
     <div class="section">
         <div class="card">
-            <ul>
-                @foreach($songs as $song)
-                    <li>{{$song->name}} - {{$song->duration}} - {{$song->genre_id}}</li>
-                @endforeach
-            </ul>
+            @foreach($songs as $song)
+                <img src="https://placehold.co/100" alt="image">
+                {{$song->name}} - {{$song->duration}} - {{$song->genre_id}}
+            @endforeach
         </div>
     </div>
 @endsection
