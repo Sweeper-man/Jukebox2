@@ -36,10 +36,11 @@ body {
         margin: 10px;
         transition: 1s;
         border-width: thin;
+        background-color: lightgrey;
     }
 
     .button:hover {
-        background-color: lightgrey;
+        background-color: grey;
     }
 }
 
