@@ -31,10 +31,16 @@ body {
     padding: 10px;
     text-align: center;
     margin-top: 50px;
-}
+    
+    .button {
+        margin: 10px;
+        transition: 1s;
+        border-width: thin;
+    }
 
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,2);
+    .button:hover {
+        background-color: lightgrey;
+    }
 }
 
 .section {
@@ -64,7 +70,9 @@ body {
     display: block;
 }
 
-.dropdown-content a:hover {background-color: lightgrey}
+.dropdown-content a:hover {
+    background-color: lightgrey
+}
 
 .dropdown:hover .dropdown-content {
     display: block;
