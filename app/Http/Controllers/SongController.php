@@ -72,10 +72,20 @@ class SongController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Song $id)
+    public function destroy(Request $request)
     {
-        $song = Song::find($id);
-        $song->delete();
+
+        $request->validate([
+            "id" => "required"
+        ]);
+
+        Song::deleted([
+            "id" => $request->get("id"),
+        ]);
+
+        // $song = $request->input('id');
+        // $song = Song::find($id);
+        // $song->delete();
         return redirect()->route('song.index')->with('success', 'Song deleted');
     }
 }
