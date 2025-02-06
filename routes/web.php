@@ -22,7 +22,7 @@ Route::get('/', function () {
 Route::get("/songs/all", [SongController::class, "index"])->name("song.index");
 Route::get("/songs/create", [SongController::class, "create"])->name("song.create");
 Route::post("/songs/store", [SongController::class, "store"])->name("song.store");
-Route::delete("/songs/delete", [SongController::class, "destroy"])->name("song.delete");
+Route::delete("/songs/delete/{id}", [SongController::class, "destroy"])->name("song.delete");
 
 
 Route::get("/genres/all", [GenreController::class, "index"])->name("genre.index");
