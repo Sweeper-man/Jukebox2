@@ -28,3 +28,4 @@ Route::delete("/songs/delete/{id}", [SongController::class, "destroy"])->name("s
 Route::get("/genres/all", [GenreController::class, "index"])->name("genre.index");
 Route::get("/genres/create", [GenreController::class, "create"])->name("genre.create");
 Route::post("/genres/store", [GenreController::class, "store"])->name("genre.store");
+Route::delete("/genres/delete/{id}", [GenreController::class, "destroy"])->name("genre.delete");

@@ -67,8 +67,11 @@ class GenreController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Genre $genre)
+    public function destroy($id)
     {
-        //
+        $genre = Genre::find($id);
+        $genre->delete();
+        
+        return redirect()->route('genre.index')->with('success', 'Genre deleted');
     }
 }
