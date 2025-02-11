@@ -1,16 +1,20 @@
 body {
-    background-image: url("jukebox.jpg");
+    background-image: url("background.webp");
     background-size: 100% 100%;
     background-position: center;
     background-attachment: fixed;
 }
 
+h1 {
+    color: white !important;
+}
+
 .menu {
-    background-color: black;
+    background-color: slategray;
 }
 
 .menu a {
-    color: white;
+    color: black;
     text-align: center;
     padding: 15px;
     text-decoration: none;
@@ -18,7 +22,7 @@ body {
 }
 
 .menu a:hover {
-    background-color: white;
+    background-color: darkslategray;
     color: black;
 }
 
@@ -50,7 +54,7 @@ body {
 }
 
 .dropdown {
-    color: white;
+    color: black;
     padding: 15px;
     border: none;
     cursor: pointer;
