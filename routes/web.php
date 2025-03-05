@@ -24,6 +24,9 @@ Route::get("/songs/create", [SongController::class, "create"])->name("song.creat
 Route::post("/songs/store", [SongController::class, "store"])->name("song.store");
 Route::delete("/songs/delete/{id}", [SongController::class, "destroy"])->name("song.delete");
 
+Route::get("/songs/{id}", [SongController::class, "filter"])->name("song.filter");
+
+
 Route::get("/genres/all", [GenreController::class, "index"])->name("genre.index");
 Route::get("/genres/create", [GenreController::class, "create"])->name("genre.create");
 Route::post("/genres/store", [GenreController::class, "store"])->name("genre.store");
