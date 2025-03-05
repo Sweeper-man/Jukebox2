@@ -11,10 +11,16 @@ class SongController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
         $songs = Song::all();
-        return view("songs.index", ["songs"=>$songs]);
+        return view('songs.index', ['songs'=>$songs]);
+    }
+
+    public function filter($id) 
+    {
+        $genreId = Song::where('genre_id', $id)->get();
+        return view('songs.filter', ['songs'=>$genreId]);
     }
 
     /**
