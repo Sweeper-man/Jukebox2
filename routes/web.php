@@ -31,3 +31,5 @@ Route::get("/genres/all", [GenreController::class, "index"])->name("genre.index"
 Route::get("/genres/create", [GenreController::class, "create"])->name("genre.create");
 Route::post("/genres/store", [GenreController::class, "store"])->name("genre.store");
 Route::delete("/genres/delete/{id}", [GenreController::class, "destroy"])->name("genre.delete");
+
+Route::get("/genres/{id}", [GenreController::class, "filter"])->name("genre.filter");
