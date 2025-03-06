@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+    <input type="text" placeholder="Search...">
     <div class="section">
         @if($songs->count())
             <div class="card">
