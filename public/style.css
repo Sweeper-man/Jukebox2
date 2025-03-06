@@ -53,7 +53,7 @@ h1 {
     justify-content: center;
 }
 
-.menuDropdown {
+.dropdown {
     color: black;
     padding: 15px;
     border: none;
@@ -61,25 +61,25 @@ h1 {
     display: inline-block;
 }
 
-.menuDropdown-content {
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
 }
 
-.menuDropdown-content a {
+.dropdown-content a {
     color: black;
     padding: 15px;
     text-decoration: none;
     display: block;
 }
 
-.menuDropdown-content a:hover {
+.dropdown-content a:hover {
     background-color: lightgrey;
     color: black;
 }
 
-.menuDropdown:hover .menuDropdown-content {
+.dropdown:hover .dropdown-content {
     display: block;
 }

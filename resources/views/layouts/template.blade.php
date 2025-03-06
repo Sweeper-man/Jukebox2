@@ -12,14 +12,14 @@
 <body>
     <div class="menu">
         <a href="/">Home</a>
-        <div class="menuDropdown">Songs
-            <div class="menuDropdown-content">
+        <div class="dropdown">Songs
+            <div class="dropdown-content">
                 <a href="{{route('song.create')}}">Create</a>
                 <a href="{{route('song.index')}}">All</a>
             </div>
         </div>
-        <div class="menuDropdown">Genres
-            <div class="menuDropdown-content">
+        <div class="dropdown">Genres
+            <div class="dropdown-content">
                 <a href="{{route('genre.create')}}">Create</a>
                 <a href="{{route('genre.index')}}">All</a>
             </div>
