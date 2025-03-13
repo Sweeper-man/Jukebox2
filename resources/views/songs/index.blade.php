@@ -5,7 +5,10 @@
 @endsection
 
 @section('content')
-    <input type="text" placeholder="Search...">
+    <!-- <input type="text" placeholder="Search..."> -->
+    @foreach($genres as $genre)
+        <input type="checkbox" value="{{$genre->id}}">{{$genre->name}}
+    @endforeach
     <div class="section">
         @if($songs->count())
             <div class="card">

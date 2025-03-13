@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Song;
+use App\Models\Genre;
 use Illuminate\Http\Request;
 use Psy\Readline\Hoa\Console;
 
@@ -14,7 +15,9 @@ class SongController extends Controller
     public function index(Request $request)
     {
         $songs = Song::all();
-        return view('songs.index', ['songs'=>$songs]);
+        $genres = Genre::all();
+        return view('songs.index', ['songs' => $songs,
+        'genres' => $genres]);
     }
 
     public function filter($id) 
