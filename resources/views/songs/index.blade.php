@@ -7,7 +7,12 @@
 @section('content')
     <!-- <input type="text" placeholder="Search..."> -->
     @foreach($genres as $genre)
-        <input type="checkbox" value="{{$genre->id}}">{{$genre->name}}
+        <form method="GET" action="{{ route('song.filter', $genre->id)}}">
+            <input type="checkbox" id="filter" value="{{$genre->id}}"
+            {{ in_array($genre->id, request('genres', [])) ? 'checked' : '' }}
+            onchange="this.form.submit()">
+            {{$genre->name}}
+        </form>
     @endforeach
     <div class="section">
         @if($songs->count())
