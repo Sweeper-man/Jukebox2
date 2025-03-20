@@ -23,7 +23,9 @@ class SongController extends Controller
     public function filter($id) 
     {
         $genreId = Song::where('genre_id', $id)->get();
-        return view('songs.index', ['songs'=>$genreId]);
+        $genres = Genre::all();
+        return view('songs.index', ['songs'=>$genreId, 
+        'genres' => $genres]);
     }
 
     /**

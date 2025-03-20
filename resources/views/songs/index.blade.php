@@ -14,7 +14,7 @@
             {{$genre->name}}
         </form>
     @endforeach
-    <div class="section">
+    <!-- <div class="section"> -->
         @if($songs->count())
             <div class="card">
                 @foreach($songs as $song)
