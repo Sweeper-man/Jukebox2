@@ -1,5 +1,9 @@
 @extends('layouts.template')
 
+@section('title')
+    Create songs
+@endsection
+
 @section('content')
     <div class="section">
         <div class="card">
@@ -11,7 +15,7 @@
                 <label for="">Vul hier de duration van het liedje in:</label>
                 <input name="duration" type="number">
 
-                <label for="">Vul hier het genre id in:</label>
+                <label for="">Vul hier het genre ID in:</label>
                 <input name="genre_id" type="text">
 
                 <input type="submit" value="Maak nummer aan">

@@ -53,7 +53,7 @@ class SongController extends Controller
             "genre_id" => $request->get("genre_id")
         ]);
 
-        return redirect()->route('song.create');
+        return redirect()->route('songs.create');
     }
 
     /**
@@ -61,7 +61,8 @@ class SongController extends Controller
      */
     public function show(Song $song)
     {
-        //
+        $songs = Song::all();
+        return view("songs.info", ['songs' => $songs]);
     }
 
     /**
