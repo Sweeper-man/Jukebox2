@@ -27,7 +27,7 @@
                     <form action="{{ route('song.delete', $song->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
-                            <button class="button">Delete</button>
+                        <button class="button">Delete</button>
                     </form>
                 @endforeach
             </div>
