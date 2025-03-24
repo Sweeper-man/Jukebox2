@@ -61,8 +61,8 @@ class SongController extends Controller
      */
     public function show(Song $song)
     {
-        $songs = Song::all();
-        return view("songs.info", ['songs' => $songs]);
+        $song = Song::all();
+        return view("songs.info", ['songs' => $song]);
     }
 
     /**
@@ -86,8 +86,8 @@ class SongController extends Controller
      */
     public function destroy($id)
     {
-        $song = Song::find($id);
-        $song->delete();
+        $songs = Song::find($id);
+        $songs->delete();
         
         return redirect()->route('song.index')->with('success', 'Song deleted');
     }
