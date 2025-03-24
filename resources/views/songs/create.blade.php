@@ -1,6 +1,6 @@
 @extends('layouts.template')
 
-@section("content")
+@section('content')
     <div class="section">
         <div class="card">
             <form action="/songs/store" method="POST">

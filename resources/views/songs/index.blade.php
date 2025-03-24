@@ -19,7 +19,7 @@
             <div class="card">
                 @foreach($songs as $song)
                     <img src="https://placehold.co/100" alt="image">
-                    {{$song->name}} - {{$song->duration}} - {{$song->genre_id}}
+                    {{$song->name}}
                     <form action="{{ route('song.delete', $song->id) }}" method="POST">
                         @csrf
                         @method('DELETE')

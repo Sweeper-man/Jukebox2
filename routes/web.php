@@ -25,6 +25,7 @@ Route::post("/songs/store", [SongController::class, "store"])->name("song.store"
 Route::delete("/songs/delete/{id}", [SongController::class, "destroy"])->name("song.delete");
 
 Route::get("/songs/{id}", [SongController::class, "filter"])->name("song.filter");
+Route::get("/songs/info", [SongController::class, "show"])->name("song.info");
 
 
 Route::get("/genres/all", [GenreController::class, "index"])->name("genre.index");
