@@ -53,7 +53,7 @@ class SongController extends Controller
             "genre_id" => $request->get("genre_id")
         ]);
 
-        return redirect()->route('songs.create');
+        return redirect()->route('song.create');
     }
 
     /**
