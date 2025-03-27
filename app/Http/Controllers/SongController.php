@@ -33,7 +33,7 @@ class SongController extends Controller
      */
     public function create()
     {
-        return view("songs.create");
+        return view('songs.create');
     }
 
     /**
@@ -59,10 +59,10 @@ class SongController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Song $song)
+    public function show($id)
     {
-        $song = Song::all();
-        return view("songs.info", ['songs' => $song]);
+        $songs = Song::find($id);
+        return view('songs.info', ['songs' => $songs]);
     }
 
     /**

@@ -5,9 +5,7 @@
 @endsection
 
 @section('content')
-    @foreach($songs as $song)
-        <h1>{{ $song->name }}</h1>
-        <p><strong>Duration: </strong>{{ $song->duration }} seconds</p>
-        <p><strong>Genre ID: </strong>{{ $song->genre_id }}</p>
-    @endforeach
+    <h1>{{$songs->name}}</h1>
+    <p><strong>Duration: </strong>{{$songs->duration}} seconds</p>
+    <p><strong>Genre ID: </strong>{{$songs->genre_id}}</p>
 @endsection
