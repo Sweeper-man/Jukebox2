@@ -24,6 +24,12 @@
                 <a href="{{route('genre.index')}}">All</a>
             </div>
         </div>
+        <div class="dropdown">Playlists
+            <div class="dropdown-content">
+                <a href="{{route('playlist.create')}}">Create</a>
+                <a href="{{route('playlist.index')}}">All</a>
+            </div>
+        </div>
     </div>
 
     @yield('content')

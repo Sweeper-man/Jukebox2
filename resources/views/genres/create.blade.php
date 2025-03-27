@@ -1,5 +1,9 @@
 @extends('layouts.template')
 
+@section('title')
+    Create genres
+@endsection
+
 @section("content")
     <div class="section">
         <div class="card">

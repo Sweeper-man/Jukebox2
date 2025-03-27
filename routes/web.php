@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GenreController;
+use App\Http\Controllers\PlaylistController;
 use App\Http\Controllers\SongController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,3 +35,7 @@ Route::post("/genres/store", [GenreController::class, "store"])->name("genre.sto
 Route::delete("/genres/delete/{id}", [GenreController::class, "destroy"])->name("genre.delete");
 
 Route::get("/genres/{id}", [GenreController::class, "filter"])->name("genre.filter");
+
+Route::get("/playlists/all", [PlaylistController::class, "index"])->name("playlist.index");
+Route::get("/playlists/create", [PlaylistController::class, "create"])->name("playlist.create");
+Route::post("/playlists/store", [PlaylistController::class, "store"])->name("playlist.store");

@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Genre;
+use App\Models\Playlist;
 use Illuminate\Http\Request;
 
-class GenreController extends Controller
+class PlaylistController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index(Request $request)
     {
-        $genres = Genre::all();
-        return view("genres.index", ["genres"=>$genres]);
+        $playlists = Playlist::with('songs')->get();
+        return view("playlists.index");
     }
 
     /**
@@ -21,7 +21,7 @@ class GenreController extends Controller
      */
     public function create()
     {
-        return view("genres.create");
+        //
     }
 
     /**
@@ -29,21 +29,13 @@ class GenreController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            "name" => "required"
-        ]);
-
-        Genre::create([
-            "name" => $request->get("name")
-        ]);
-
-        return redirect()->route('genre.create');
+        //
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Genre $genre)
+    public function show(Playlist $playlist)
     {
         //
     }
@@ -51,7 +43,7 @@ class GenreController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Genre $genre)
+    public function edit(Playlist $playlist)
     {
         //
     }
@@ -59,7 +51,7 @@ class GenreController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Genre $genre)
+    public function update(Request $request, Playlist $playlist)
     {
         //
     }
@@ -67,11 +59,8 @@ class GenreController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($id)
+    public function destroy(Playlist $playlist)
     {
-        $genre = Genre::find($id);
-        $genre->delete();
-        
-        return redirect()->route('genre.index')->with('success', 'Genre deleted');
+        //
     }
 }
