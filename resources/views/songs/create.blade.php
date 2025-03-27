@@ -20,15 +20,15 @@
 
                 <input type="submit" value="Maak nummer aan">
 
-                @error("name")
+                @error('name')
                     <p style="color:red">{{$message}}</p>
                 @enderror
                 
-                @error("duration")
+                @error('duration')
                     <p style="color:red">{{$message}}</p>
                 @enderror
 
-                @error("genre_id")
+                @error('genre_id')
                     <p style="color:red">{{$message}}</p>
                 @enderror
             </form>

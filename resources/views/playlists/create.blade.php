@@ -14,7 +14,7 @@
 
                 <input type="submit" value="Maak playlist aan">
 
-                @error("name")
+                @error('name')
                     <p style="color:red">{{$message}}</p>
                 @enderror
             </form>
