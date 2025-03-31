@@ -5,5 +5,6 @@
 @endsection
 
 @section('content')
-
+    <div class="section">
+    @if($playlists->count())
 @endsection

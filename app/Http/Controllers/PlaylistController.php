@@ -12,7 +12,7 @@ class PlaylistController extends Controller
      */
     public function index(Request $request)
     {
-        $playlists = Playlist::with('songs')->get();
+        $playlists = Playlist::all();
         return view("playlists.index", ["playlists"=>$playlists]);
     }
 
