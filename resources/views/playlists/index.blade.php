@@ -11,6 +11,18 @@
                 @foreach($playlists as $playlist)
                     <img src="https://placehold.co/100" alt="image">
                     {{$playlist->name}}
+
+                    <form>
+                        @csrf
+                        <select>
+                            <option value="">Select a song</option>
+                            @foreach($songs as $song)
+                                <option value="{{ $song->id }}">{{ $song->name }}</option>
+                            @endforeach
+                        </select>
+                        <button type="submit">Add song</button>
+                    </form>
+
                     <form action="{{ route('playlist.delete', $playlist->id) }}" method="POST">
                         @csrf
                         @method('DELETE')

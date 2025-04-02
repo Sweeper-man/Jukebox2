@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Playlist;
+use App\Models\Song;
 use Illuminate\Http\Request;
 
 class PlaylistController extends Controller
@@ -13,7 +14,9 @@ class PlaylistController extends Controller
     public function index(Request $request)
     {
         $playlists = Playlist::all();
-        return view("playlists.index", ["playlists"=>$playlists]);
+        $songs = Song::all();
+        return view("playlists.index", ["playlists" => $playlists, 
+        'songs' => $songs]);
     }
 
     /**
@@ -22,6 +25,21 @@ class PlaylistController extends Controller
     public function create()
     {
         return view('playlists.create');
+    }
+
+    public function addSong(Request $request, Playlist $playlist)
+    {
+        $request->validate([
+            "song_id" => "required|exists:songs,id"
+        ]);
+        
+        $songs = Song::find($request->song_id);
+        $songs->playlist_id = $playlist->id;
+        $songs->save();
+
+        echo($songs);
+        
+        return view();
     }
 
     /**

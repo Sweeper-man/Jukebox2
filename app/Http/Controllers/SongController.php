@@ -24,7 +24,7 @@ class SongController extends Controller
     {
         $genreId = Song::where('genre_id', $id)->get();
         $genres = Genre::all();
-        return view('songs.index', ['songs'=>$genreId, 
+        return view('songs.index', ['songs' => $genreId, 
         'genres' => $genres]);
     }
 
