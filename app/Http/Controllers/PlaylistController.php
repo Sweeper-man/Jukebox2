@@ -15,7 +15,7 @@ class PlaylistController extends Controller
     {
         $playlists = Playlist::all();
         $songs = Song::all();
-        return view("playlists.index", ["playlists" => $playlists, 
+        return view("playlists.index", ['playlists' => $playlists, 
         'songs' => $songs]);
     }
 
@@ -36,10 +36,8 @@ class PlaylistController extends Controller
         $songs = Song::find($request->song_id);
         $songs->playlist_id = $playlist->id;
         $songs->save();
-
-        echo($songs);
         
-        return view();
+        // return back()->with('success', 'Song added to playlist');
     }
 
     /**
