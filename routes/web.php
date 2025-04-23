@@ -41,4 +41,6 @@ Route::get("/playlists/create", [PlaylistController::class, "create"])->name("pl
 Route::post("/playlists/store", [PlaylistController::class, "store"])->name("playlist.store");
 Route::delete("/playlists/delete/{id}", [PlaylistController::class, "destroy"])->name("playlist.delete");
 
-Route::get("/playlists/add_song", [PlaylistController::class, "addSong"])->name("playlist.addSong");
+Route::post("/playlists/{playlist}/addSong", [PlaylistController::class, "addSong"])->name("playlist.addSong");
+
+// Route::get("/playlists/{id}/showSongs", [PlaylistController::class, "showSongs"])->name("playlist.showSongs");

@@ -37,8 +37,14 @@ class PlaylistController extends Controller
         $songs->playlist_id = $playlist->id;
         $songs->save();
         
-        // return back()->with('success', 'Song added to playlist');
+        return back()->with('success', 'Song added to playlist');
     }
+
+    // public function showSongs($id)
+    // {
+    //     $playlists = Playlist::with('songs')->find($id);
+    //     return view('playlists.show', compact('playlist'));
+    // }
 
     /**
      * Store a newly created resource in storage.

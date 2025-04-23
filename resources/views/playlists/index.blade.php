@@ -12,7 +12,7 @@
                     <img src="https://placehold.co/100" alt="image">
                     {{$playlist->name}}
 
-                    <form action="{{ route('playlist.addSong', $playlist->id) }}">
+                    <form action="{{ route('playlist.addSong', $playlist->id) }}" method="POST">
                         @csrf
                         <select>
                             <option value="">Select a song</option>
